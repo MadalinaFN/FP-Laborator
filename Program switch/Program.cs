@@ -14,23 +14,22 @@ namespace Program_switch
 
             double F,C,ca;
 
-            Console.WriteLine("Introduceti numarul 1 pentru grade celsius mai mici decat 50 sau 2 pentru grade celsius mai mari decat 50");
+            Console.WriteLine("Introduceti numarul 1 pentru a converti grade celsius in fahrenheit sau 2 pentru a converti grade fahrenheit in celsius");
             ca = int.Parse(Console.ReadLine());
 
             switch (ca)
             {
                 case 1:
-                    Console.WriteLine("Introduceti un numar mai mic decat 50 care sa reprezinte gradele celsius");
+                    Console.WriteLine("Introduceti un numar care sa reprezinte gradele celsius");
                     C = int.Parse(Console.ReadLine());
                     F = C * 1.8 + 32;
-                    if (C < 50)
                     Console.WriteLine("Gradele exprimate in fahrenheit sunt {0}", F);
                     break;
                 case 2:
-                    Console.WriteLine("Introduceti un numar mai mare decat 50 care sa reprezinte gradele celsius");
-                    C = int.Parse(Console.ReadLine());
-                    F = C * 1.8 + 32;
-                    Console.WriteLine("Gradele exprimate in fahrenheit sunt {0}", F);
+                    Console.WriteLine("Introduceti un numar care sa reprezinte gradele fahrenheit");
+                    F = int.Parse(Console.ReadLine());
+                    C = (F - 32) / 1.8;
+                    Console.WriteLine("Gradele exprimate in celsius sunt {0}", C);
                     break;
                 default:
                     Console.WriteLine("Numarul introdus nu e corect");
