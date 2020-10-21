@@ -10,7 +10,7 @@ namespace Program_switch
     {
         static void Main(string[] args)
         {
-            //Afisare grade celsius in fahrenheit
+            //Afisare grade celsius in fahrenheit si invers
 
             double F,C,ca;
 
