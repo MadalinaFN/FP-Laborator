@@ -10,11 +10,11 @@ namespace Program_switch
     {
         static void Main(string[] args)
         {
-            //Operatii: +,-,*,/
+            //Operatii: adunare, scadere, inmultire, impartire, radical, modul
 
             double ca, a, b, r;
 
-            Console.WriteLine("Introduceti 1 pentru a realiza o suma, 2 pentru a realiza o resta, 3 pentru a realiza o inmultire sau 4 pentru a realiza o impartire");
+            Console.WriteLine("Introduceti 1 pentru a realiza o adunare, 2 pentru a realiza o scadere, 3 pentru a realiza o inmultire, 4 pentru a realiza o impartire, 5 pentru a realiza un radical sau 6 pentru a realiza un modul");
             ca = int.Parse(Console.ReadLine());
 
             switch (ca)
@@ -24,7 +24,7 @@ namespace Program_switch
                     a = int.Parse(Console.ReadLine());
                     b = int.Parse(Console.ReadLine());
                     r = a + b;
-                    Console.WriteLine("Suma numerelor este {0}", r);
+                    Console.WriteLine("Adunarea numerelor este {0}", r);
                     break;
                 case 2:
                     Console.WriteLine("Introduceti doua numere");
@@ -34,7 +34,7 @@ namespace Program_switch
                         r = a - b;
                     else
                         r = b - a;
-                    Console.WriteLine("Resta numerelor este {0}", r);
+                    Console.WriteLine("Scaderea numerelor este {0}", r);
                     break;
                 case 3:
                     Console.WriteLine("Introduceti doua numere");
@@ -52,6 +52,18 @@ namespace Program_switch
                     else
                         r = b / a;
                     Console.WriteLine("Impartirea numerelor este {0}", r);
+                    break;
+                case 5:
+                    Console.WriteLine("Introduceti un numar");
+                    a = int.Parse(Console.ReadLine());
+                    r = Math.Sqrt(a);
+                    Console.WriteLine("Rezultatul radicalului numarului este {0}", r);
+                    break;
+                case 6:
+                    Console.WriteLine("Introduceti un numar");
+                    a = int.Parse(Console.ReadLine());
+                    r = Math.Abs(a);
+                    Console.WriteLine("Rezultatul modulului numarului este {0}", r);
                     break;
                 default:
                     Console.WriteLine("Numarul introdus nu e corect");
